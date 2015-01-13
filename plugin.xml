@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.iflytek.iflytek.iflytek"
+        version="1.5.2">
+
+
+    <name>IflyTek</name>
+    <description>IflyTek for cordova plugin</description>
+    <author>IflyTek</author>
+    <keywords>IflyTek</keywords>
+    <license>Apache 2.0 License</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0"/>
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+
+
+        <js-module src="www/iflytek.js" name="iflytek">
+            <clobbers target="window.plugins.IflyTek"/>
+        </js-module>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IflyTekPlugin">
+                <param name="android-package" value="com.iflytek.iflytek.IflyTekPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/IflyTekPlugin.java" target-dir="src/com/iflytek/iflytek"/>
+        <source-file src="libs/android/Msc.jar" target-dir="libs"/>
+        <source-file src="libs/android/android-support-v4.jar" target-dir="libs"/>
+		<source-file src="libs/android/Sunflower.jar" target-dir="libs"/>
+        <source-file src="libs/android/armeabi/libmsc.so" target-dir="libs/armeabi"/>
+
+    </platform>
+
+</plugin>
