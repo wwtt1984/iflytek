@@ -30,6 +30,7 @@
         </config-file>
 
         <source-file src="src/android/IflyTekPlugin.java" target-dir="src/com/iflytek/iflytek"/>
+		<source-file src="src/android/JsonParser.java" target-dir="src/com/iflytek/speech/util"/>
         <source-file src="libs/android/Msc.jar" target-dir="libs"/>
         <source-file src="libs/android/android-support-v4.jar" target-dir="libs"/>
 		<source-file src="libs/android/Sunflower.jar" target-dir="libs"/>
