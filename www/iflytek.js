@@ -9,7 +9,7 @@ IflyTek.prototype.IflyTekInit = function (appId,callback) {
     return cordova.exec(callback, null,"IflyTekPlugin","Init",[appId]);
 };
 
-IflyTek.prototype.IflyTekStartListen = function (ip,callback) {
+IflyTek.prototype.IflyTekStartListen = function (callback) {
     return cordova.exec(callback, null,"IflyTekPlugin","StartListen",[ip]);
 };
 
